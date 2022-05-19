@@ -14,7 +14,7 @@ db_butter = 20*log(abs(butter_func));
 
 figure(1);
 subplot(2,1,1);
-plot(w,abs(butter_func));
+plot(w,butter_func);
 subplot(2,1,2);
 plot(w,db);
 
@@ -26,7 +26,7 @@ db_cheby1 = 20*log(abs(cheby1_func));
 
 figure(2);
 subplot(2,1,1);
-plot(w,abs(cheby1_func));
+plot(w,cheby1_func);
 subplot(2,1,2);
 plot(w,db_cheby1);
 
@@ -40,7 +40,7 @@ db_cheby2 = 20*log(abs(cheby2_func));
 
 figure(3);
 subplot(2,1,1);
-plot(w,abs(cheby2_func));
+plot(w,cheby2_func);
 subplot(2,1,2);
 plot(w,db_cheby2);
 
@@ -54,7 +54,7 @@ db_ellip = 20*log(abs(ellip_func));
 
 figure(4);
 subplot(2,1,1);
-plot(w,abs(ellip_func));
+plot(w,ellip_func);
 subplot(2,1,2);
 plot(w,db_ellip);
 
@@ -63,26 +63,26 @@ H2 = freqs(b2,a2,w);
 H3 = freqs(b3,a3,w);
 H4 = freqs(b4,a4,w);
 
-angle1 = angle(H1) * 180/pi;
-angle2 = angle(H2) * 180/pi;
-angle3 = angle(H3) * 180/pi;
-angle4 = angle(H4) * 180/pi;
+angle1 = angle(phase1) * 180/pi;
+angle2 = angle(phase2) * 180/pi;
+angle3 = angle(phase3) * 180/pi;
+angle4 = angle(phase4) * 180/pi;
 
 figure(5);
-semilogx(w,abs(H1));
+plot(w,H1);
 hold on
-semilogx(w,abs(H2));
+plot(w,phase2);
 hold on
-semilogx(w,abs(H3));
+plot(w,phase3);
 hold on
-semilogx(w,abs(H4));
+plot(w,phase4);
 hold off
 
 figure(6);
-semilogx(w, angle1);
+plot(w, angle1);
 hold on
-semilogx(w, angle2);
+plot(w, angle2);
 hold on
-semilogx(w, angle3);
+plot(w, angle3);
 hold on
-semilogx(w, angle4);
+plot(w, angle4);

@@ -35,34 +35,14 @@ f2 = [0.1 0.05 0.01 0.15]
 
 g1 = cos(2*pi*f*t3);
 g2 = cos(2*pi*f2(1)*t1);
-stem(t3,g1);
-hold on
-plot(t1,g2);
-hold off
-
-figure(5);
+stem(t3,t3)
 
 g1 = cos(2*pi*f*t3);
 g2 = cos(2*pi*f2(2)*t1);
-stem(t3,g1);
-hold on
-plot(t1,g2);
-hold off
-
-figure(6);
 
 g1 = cos(2*pi*f*t3);
 g2 = cos(2*pi*f2(3)*t1);
-stem(t3,g1);
-hold on
-plot(t1,g2);
-hold off
-
-figure(7);
 
 g1 = cos(2*pi*f*t3);
 g2 = cos(2*pi*f2(4)*t1);
-stem(t3,g1);
-hold on
-plot(t1,g2);
 
