@@ -1,5 +1,6 @@
-function [puls] = tcospuls(time)
-    puls = tripuls(time,2) .* cos((pi/2)*time);
-end
+function output = tcospuls(t)
+% Plots a triangle pulse multiplied by a cosine wave.
+% t - x-axis
 
-%  puls = tripuls(time,time(length(time)) - time(1)) .* cos((pi/2)*time);
+output = tripuls(t,2).*cos((pi/2)*t);
+end
